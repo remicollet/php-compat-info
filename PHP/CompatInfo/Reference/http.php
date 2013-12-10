@@ -36,7 +36,7 @@ class PHP_CompatInfo_Reference_Http
      * Latest version of Extension/Reference supported
      */
     const LASTV1      = '1.7.6';  // 2013-06-20 (stable)
-    const REF_VERSION = '2.0.1';  // 2013-11-26 (stable)
+    const REF_VERSION = '2.0.3';  // 2013-12-10 (stable)
 
     /**
      * Gets informations about extensions
