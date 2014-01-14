@@ -36,7 +36,7 @@ class PHP_CompatInfo_Reference_Riak
     /**
      * Latest version of Extension/Reference supported
      */
-    const REF_VERSION = '1.0.0';  // 2013-11-18 (stable)
+    const REF_VERSION = '1.1.3';  // 2013-12-20 (stable)
 
     /**
      * Gets informations about extensions
@@ -86,6 +86,12 @@ class PHP_CompatInfo_Reference_Riak
         $items = array(
             'Riak\Property\ReplicationMode\ReplicationMode'
                                                     => array('5.3.0', ''),
+        );
+        $this->applyFilter($release, $items, $interfaces);
+
+        $release = '1.1.0';       // 2013-12-14 (beta)
+        $items = array(
+            'Riak\Output\ConflictResolver'          => array('5.3.0', ''),
         );
         $this->applyFilter($release, $items, $interfaces);
 
@@ -194,6 +200,16 @@ class PHP_CompatInfo_Reference_Riak
         $release = '0.9.0';       // 2013-11-08 (beta)
         $items = array(
             'Riak\ServerInfo'                       => array('5.3.0', ''),
+        );
+        $this->applyFilter($release, $items, $classes);
+
+        $release = '1.1.0';       // 2013-12-14 (beta)
+        $items = array(
+            'Riak\Exception\NonUniqueException'     => array('5.3.0', ''),
+            'Riak\Exception\UnresolvedConflictException'
+                                                    => array('5.3.0', ''),
+            'Riak\Input\GetResolverInput'           => array('5.3.0', ''),
+            'Riak\Output\YoungestSiblingResolver'   => array('5.3.0', ''),
         );
         $this->applyFilter($release, $items, $classes);
 
